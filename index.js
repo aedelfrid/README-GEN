@@ -8,26 +8,30 @@ const questions = [
     {
         type: 'confirm',
         name: 'start',
-        message: 'Welcome to the READMEGEN, would you like to generate a README?'
+        message: 'Welcome to the READMEGEN, would you like to generate a README?',
+        default: true,
     },
     {   
         when: (answers) => answers.start == true,
         type: 'checkbox',
         name: 'sectionsIncl',
         message: 'What sections would you you like to include? (Note: The description and License are included by default)',
-        choices: ['Installation','Usage','Contributing','Tests']
+        choices: ['Installation','Usage','Contributing','Tests'],
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
         when: (answers) => answers.start == true,
         type: 'input',
         name: 'title',
-        message: 'What is the name of your project?'
+        message: 'What is the name of your project?',
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
         when: (answers) => answers.start == true,
         type: 'input',
         name: 'description',
-        message: 'What does your project do?'
+        message: 'What does your project do?',
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
         when: (answers) => {
@@ -36,7 +40,8 @@ const questions = [
         },
         type: 'input',
         name: 'installation',
-        message: 'How do you install your project?'
+        message: 'How do you install your project?',
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
         when: (answers) => {
@@ -45,7 +50,8 @@ const questions = [
         },
         type: 'input',
         name: 'usage',
-        message: 'How do you use your project?'
+        message: 'How do you use your project?',
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
         when: (answers) => {
@@ -53,7 +59,8 @@ const questions = [
         },
         type: 'input',
         name: 'github',
-        message: 'What is your GitHub username?'
+        message: 'What is your GitHub username?',
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
         when: (answers) => {
@@ -61,7 +68,8 @@ const questions = [
         },
         type: 'input',
         name: 'githubLink',
-        message: 'Please provide a link to your GitHub Profile'
+        message: 'Please provide a link to your GitHub Profile',
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
         when: (answers) => {
@@ -69,7 +77,8 @@ const questions = [
         },
         type: 'input',
         name: 'email',
-        message: 'What is your Email?'
+        message: 'What is your Email?',
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
         when: (answers) => {
@@ -78,7 +87,8 @@ const questions = [
         },
         type: 'input',
         name: 'contributing',
-        message: 'What is the best way to contribute to your project?'
+        message: 'What is the best way to contribute to your project?',
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
         when: (answers) => {
@@ -87,16 +97,18 @@ const questions = [
         },
         type: 'input',
         name: 'tests',
-        message: 'What is the best way to test your project?'
+        message: 'What is the best way to test your project?',
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
         when: (answers) => {
             return answers.start == true
         },
-        type: 'checkbox',
+        type: 'list',
         name: 'licenseSelect',
         message: 'Which license would you like to use?',
-        choices: ['MIT','Mozilla Public License 2.0','GNU AGPLv3','The Unlicense']
+        choices: ['MIT','Mozilla Public License 2.0','GNU AGPLv3','The Unlicense'],
+        validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
 ];
 
