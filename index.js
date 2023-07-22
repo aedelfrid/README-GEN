@@ -33,7 +33,7 @@ const questions = [
         type: 'input',
         name: 'description',
         message: 'What does your project do?',
-        default: `README GEN is a helpful tool to quickly make a professional RRADME for your project.`,
+        default: `README GEN is a helpful tool to quickly make a professional README for your project.`,
         validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
@@ -98,7 +98,7 @@ const questions = [
         message: 'What is the best way to contribute to your project?',
         default: 
         `If you'd like to contribute to README GEN, simply clone the project and checkout to a new branch then commit as normal. 
-        Finally, when ready for merging please seek permission from aedlfrid.`,
+        Finally, when ready for merging please seek permission from aedelfrid.`,
         validate: (value) => {if(value) return true; else return 'Please provide an input.'}
     },
     {
