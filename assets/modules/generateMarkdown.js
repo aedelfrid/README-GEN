@@ -27,22 +27,22 @@ function renderLicenseBadge(license) {
   if (license === 'MIT') {
     license = licenses.MIT
     return `
-    [![License: ${license.title}][${license.shield}]][${license.url}]
+    [![License: ${license.title}][${license.shield}]](${license.url})
     `
   } else if (license === 'Mozilla Public License 2.0') {
     license = licenses.Mozilla
     return `
-    <br>[![License: ${license.title}][${license.shield}]][${license.url}]
+    <br>[![License: ${license.title}][${license.shield}]](${license.url})
     `
   } else if (license === 'GNU AGPLv3') {
     license = licenses.GNUAGPLv3
     return `
-    <br>[![License: ${license.title}][${license.shield}]][${license.url}]
+    <br>[![License: ${license.title}][${license.shield}]](${license.url})
     `
   } else if (license === 'Apache 2.0 License') {
     license = licenses.Apache
     return `
-    <br>[![License: ${license.title}][${license.shield}]][${license.url}]
+    <br>[![License: ${license.title}][${license.shield}]](${license.url})
     `
   }
 };
