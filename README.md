@@ -19,6 +19,8 @@
     You can install README GEN by cloning the github project and running 'npm i' in your CLI to install the dependencies.  
         
   ## Usage
+
+    https://youtu.be/yNycIWKIYRQ
         
     You can use README GEN by running 'node index.js' in your CLI and answering all the questions.  
         
