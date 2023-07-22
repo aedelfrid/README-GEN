@@ -32,7 +32,7 @@
   ## Testing
     
   Run the project and generate a readme!  
-    [![License][https://img.shields.io/badge/license-MIT-blue]](https://opensource.org/license/mit/)
+    [![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/license/mit/)
       
     https://opensource.org/license/mit/
       
